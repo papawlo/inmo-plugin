@@ -11,7 +11,7 @@ import { __ } from "@wordpress/i18n";
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-import { useBlockProps } from "@wordpress/block-editor";
+import { useBlockProps, RichText } from "@wordpress/block-editor";
 
 /**
  * The save function defines the way in which the different attributes should
@@ -22,10 +22,40 @@ import { useBlockProps } from "@wordpress/block-editor";
  *
  * @return {WPElement} Element to render.
  */
-export default function save() {
+export default function save(props) {
+	const blockProps = useBlockProps.save();
 	return (
-		<p {...useBlockProps.save()}>
-			{__("Inmo – hello from the saved content!", "inmo")}
-		</p>
+		// <section {...useBlockProps.save()}>
+		<section id="inicio" class="inicio min-h-screen flex flex-col">
+			<div class="flex flex-col justify-center items-center mx-auto container">
+				<RichText.Content
+					className="inicio-title text-2xl font-bold text-center mt-8 text-white"
+					tagName="h1"
+					value={props.attributes.title}
+				/>
+				<RichText.Content
+					className="inicio-line-1 mt-10 text-base text-white text-center leading-10 tracking-wide"
+					tagName="p"
+					value={props.attributes.paragraph1}
+				/>
+				<RichText.Content
+					className="inicio-line-2 mt-10 text-base text-white text-center leading-10 tracking-wide"
+					tagName="p"
+					value={props.attributes.paragraph2}
+				/>
+				<button
+					id="takebot"
+					className="inicio-btn-primary bg-white px-12 py-8 rounded-full text-primary mt-6 border-none"
+				>
+					{props.attributes.buttonPrimaryText}
+				</button>
+				<a
+					className="inicio-btn-secondary mt-5 mb-4 text-white no-underline"
+					href={props.attributes.buttonSecondaryUrl}
+				>
+					{props.attributes.buttonSecondaryText}
+				</a>
+			</div>
+		</section>
 	);
 }

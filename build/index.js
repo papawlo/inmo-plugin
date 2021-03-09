@@ -182,8 +182,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Edit; });
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
@@ -195,6 +195,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
  */
+
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -221,8 +222,98 @@ __webpack_require__.r(__webpack_exports__);
  * @return {WPElement} Element to render.
  */
 
-function Edit() {
-  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["useBlockProps"])(), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Inmo – hello from the editor!", "inmo"));
+function Edit(props) {
+  var _props$attributes = props.attributes,
+      title = _props$attributes.title,
+      paragraph1 = _props$attributes.paragraph1,
+      paragraph2 = _props$attributes.paragraph2,
+      buttonPrimaryText = _props$attributes.buttonPrimaryText,
+      buttonSecondaryText = _props$attributes.buttonSecondaryText,
+      buttonSecondaryUrl = _props$attributes.buttonSecondaryUrl;
+
+  var onChangeTitle = function onChangeTitle(newTitle) {
+    props.setAttributes({
+      title: newTitle
+    });
+  };
+
+  function onChangeButtonPrimaryText(value) {
+    props.setAttributes({
+      buttonPrimaryText: value
+    });
+  }
+
+  function onChangeButtonSecondaryText(value) {
+    props.setAttributes({
+      buttonSecondaryText: value
+    });
+  }
+
+  function onChangeButtonSecondaryUrl(value) {
+    props.setAttributes({
+      buttonSecondaryUrl: value
+    });
+  }
+
+  return (// <section {...useBlockProps()}>
+    [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
+      title: "Configura\xE7\xF5es",
+      initialOpen: true
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["TextControl"], {
+      help: "Insira a url do link de WhatsApp",
+      label: "WhatsApp URL",
+      value: buttonSecondaryUrl,
+      onChange: onChangeButtonSecondaryUrl
+    })))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("section", {
+      id: "inicio",
+      className: "inicio min-h-screen flex flex-col"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "flex flex-col justify-center items-center mx-auto container"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
+      className: "inicio-title text-2xl font-bold text-center mt-8 text-white",
+      tagName: "h1",
+      onChange: onChangeTitle,
+      value: title,
+      placeholder: "Ol\xE1, \xE9 bom receber voc\xEA aqui",
+      default: "Ol\xE1, \xE9 bom receber voc\xEA aqui"
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
+      className: "inicio-line-1 mt-10 text-base text-white text-center leading-10 tracking-wide",
+      tagName: "p",
+      onChange: function onChange(value) {
+        return props.setAttributes({
+          paragraph1: value
+        });
+      },
+      value: paragraph1,
+      placeholder: "N\xF3s somos a Inmo, estamos aqui para ajudar voc\xEA na constru\xE7\xE3o do seu chatbot."
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
+      className: "inicio-line-2 mt-10 text-base text-white text-center leading-10 tracking-wide",
+      tagName: "p",
+      onChange: function onChange(value) {
+        return props.setAttributes({
+          paragraph2: value
+        });
+      },
+      value: paragraph2,
+      placeholder: "linha 2"
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("button", {
+      className: "inicio-btn-primary bg-white px-12 py-8 rounded-full text-primary mt-6 border-none"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
+      onChange: onChangeButtonPrimaryText // onChange event callback
+      ,
+      value: buttonPrimaryText // Input Binding
+      ,
+      placeholder: "Name of the link"
+    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
+      className: "inicio-btn-secondary mt-5 mb-4 text-white no-underline"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
+      onChange: onChangeButtonSecondaryText // onChange event callback
+      ,
+      value: buttonSecondaryText // Input Binding
+      ,
+      placeholder: "Falar no Whatsapp"
+    }))))]
+  );
 }
 
 /***/ }),
@@ -289,7 +380,7 @@ __webpack_require__.r(__webpack_exports__);
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
 
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('create-block/inmo', {
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("create-block/inmo", {
   /**
    * @see https://make.wordpress.org/core/2020/11/18/block-api-version-2/
    */
@@ -299,25 +390,25 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('cre
    * This is the display title for your block, which can be translated with `i18n` functions.
    * The block inserter will show this name.
    */
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Inmo', 'inmo'),
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Inmo", "inmo"),
 
   /**
    * This is a short description for your block, can be translated with `i18n` functions.
    * It will be shown in the Block Tab in the Settings Sidebar.
    */
-  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Example block written with ESNext standard and JSX support – build step required.', 'inmo'),
+  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Bloco Início Header INMO", "inmo"),
 
   /**
    * Blocks are grouped into categories to help users browse and discover them.
    * The categories provided by core are `text`, `media`, `design`, `widgets`, and `embed`.
    */
-  category: 'widgets',
+  category: "common",
 
   /**
    * An icon property should be specified to make it easier to identify a block.
    * These can be any of WordPress’ Dashicons, or a custom svg element.
    */
-  icon: 'smiley',
+  icon: "smiley",
 
   /**
    * Optional block extended support features.
@@ -325,6 +416,43 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('cre
   supports: {
     // Removes support for an HTML mode.
     html: false
+  },
+  attributes: {
+    title: {
+      type: "string",
+      source: "text",
+      selector: ".inicio-title",
+      default: "Olá, é bom receber você aqui"
+    },
+    paragraph1: {
+      type: "string",
+      source: "text",
+      selector: ".inicio-line-1",
+      default: "Nós somos a Inmo, estamos aqui para ajudar você na construção do seu chatbot."
+    },
+    paragraph2: {
+      type: "string",
+      source: "text",
+      selector: ".inicio-line-2",
+      default: "Converse com o <i>Mô</i>, o robô que criamos para entender a sua necessidade ;)"
+    },
+    buttonPrimaryText: {
+      type: "string",
+      source: "text",
+      selector: ".inicio-btn-primary"
+    },
+    buttonSecondaryText: {
+      attribute: "text",
+      selector: ".btn-secondary",
+      source: "children"
+    },
+    buttonSecondaryUrl: {
+      selector: "a.inicio-btn-secondary",
+      source: "attribute",
+      // binds an attribute of the tag
+      attribute: "href" // binds href of a: the link url
+
+    }
   },
 
   /**
@@ -382,8 +510,34 @@ __webpack_require__.r(__webpack_exports__);
  * @return {WPElement} Element to render.
  */
 
-function save() {
-  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["useBlockProps"].save(), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Inmo – hello from the saved content!", "inmo"));
+function save(props) {
+  var blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["useBlockProps"].save();
+  return (// <section {...useBlockProps.save()}>
+    Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("section", {
+      id: "inicio",
+      class: "inicio min-h-screen flex flex-col"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "flex flex-col justify-center items-center mx-auto container"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
+      className: "inicio-title text-2xl font-bold text-center mt-8 text-white",
+      tagName: "h1",
+      value: props.attributes.title
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
+      className: "inicio-line-1 mt-10 text-base text-white text-center leading-10 tracking-wide",
+      tagName: "p",
+      value: props.attributes.paragraph1
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
+      className: "inicio-line-2 mt-10 text-base text-white text-center leading-10 tracking-wide",
+      tagName: "p",
+      value: props.attributes.paragraph2
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("button", {
+      id: "takebot",
+      className: "inicio-btn-primary bg-white px-12 py-8 rounded-full text-primary mt-6 border-none"
+    }, props.attributes.buttonPrimaryText), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
+      className: "inicio-btn-secondary mt-5 mb-4 text-white no-underline",
+      href: props.attributes.buttonSecondaryUrl
+    }, props.attributes.buttonSecondaryText)))
+  );
 }
 
 /***/ }),
@@ -407,6 +561,17 @@ function save() {
 /***/ (function(module, exports) {
 
 (function() { module.exports = window["wp"]["blocks"]; }());
+
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = window["wp"]["components"]; }());
 
 /***/ }),
 
