@@ -267,7 +267,49 @@ function Edit(props) {
     })))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("section", {
       id: "inicio",
       className: "inicio min-h-screen flex flex-col"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("header", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "mx-auto container max-w-full px-4"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "lg:flex lg:justify-between lg:items-center py-6"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "flex justify-between items-center"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
+      href: "https://inmo.work/",
+      className: "custom-logo-link",
+      rel: "home",
+      "aria-current": "page"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
+      src: "https://secureservercdn.net/166.62.112.107/753.6ee.myftpupload.com/wp-content/uploads/2021/03/cropped-logo.png?time=1615350937",
+      className: "custom-logo",
+      alt: "Inmo",
+      width: "81",
+      height: "25"
+    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "lg:hidden"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
+      href: "#",
+      "aria-label": "Toggle navigation",
+      id: "primary-menu-toggle"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("svg", {
+      viewBox: "0 0 20 20",
+      className: "inline-block w-6 h-6",
+      version: "1.1",
+      xmlns: "http://www.w3.org/2000/svg",
+      xmlnsXlink: "http://www.w3.org/1999/xlink"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("g", {
+      stroke: "none",
+      "stroke-width": "1",
+      fill: "currentColor",
+      "fill-rule": "evenodd"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("g", {
+      id: "icon-shape"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("path", {
+      d: "M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z",
+      id: "Combined-Shape"
+    }))))))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      id: "primary-menu",
+      className: "hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], null))))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "flex flex-col justify-center items-center mx-auto container"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
       className: "inicio-title text-2xl font-bold text-center mt-8 text-white",
@@ -297,13 +339,13 @@ function Edit(props) {
       value: paragraph2,
       placeholder: "linha 2"
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("button", {
-      className: "inicio-btn-primary bg-white px-12 py-8 rounded-full text-primary mt-6 border-none"
+      className: "inicio-btn-primary bg-white px-12 py-8 rounded-full text-primary mt-6 border-none uppercase"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
       onChange: onChangeButtonPrimaryText // onChange event callback
       ,
       value: buttonPrimaryText // Input Binding
       ,
-      placeholder: "Name of the link"
+      placeholder: "INSIRA SEU TEXTO"
     })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
       className: "inicio-btn-secondary mt-5 mb-4 text-white no-underline"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
@@ -516,7 +558,49 @@ function save(props) {
     Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("section", {
       id: "inicio",
       class: "inicio min-h-screen flex flex-col"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("header", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "mx-auto container max-w-full px-4"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "lg:flex lg:justify-between lg:items-center py-6"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "flex justify-between items-center"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
+      href: "https://inmo.work/",
+      className: "custom-logo-link",
+      rel: "home",
+      "aria-current": "page"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
+      src: "https://secureservercdn.net/166.62.112.107/753.6ee.myftpupload.com/wp-content/uploads/2021/03/cropped-logo.png?time=1615350937",
+      className: "custom-logo",
+      alt: "Inmo",
+      width: "81",
+      height: "25"
+    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "lg:hidden"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
+      href: "#",
+      "aria-label": "Toggle navigation",
+      id: "primary-menu-toggle"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("svg", {
+      viewBox: "0 0 20 20",
+      className: "inline-block w-6 h-6",
+      version: "1.1",
+      xmlns: "http://www.w3.org/2000/svg",
+      xmlnsXlink: "http://www.w3.org/1999/xlink"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("g", {
+      stroke: "none",
+      "stroke-width": "1",
+      fill: "currentColor",
+      "fill-rule": "evenodd"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("g", {
+      id: "icon-shape"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("path", {
+      d: "M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z",
+      id: "Combined-Shape"
+    }))))))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      id: "primary-menu",
+      className: "hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"].Content, null))))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       class: "flex flex-col justify-center items-center mx-auto container"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
       className: "inicio-title text-2xl font-bold text-center mt-8 text-white",
@@ -532,7 +616,7 @@ function save(props) {
       value: props.attributes.paragraph2
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("button", {
       id: "takebot",
-      className: "inicio-btn-primary bg-white px-12 py-8 rounded-full text-primary mt-6 border-none"
+      className: "inicio-btn-primary bg-white px-12 py-8 rounded-full text-primary mt-6 border-none focus:ring-4 focus:ring-purple-500 focus:outline-none text-base transform hover:scale-110 transition duration-500 ease-in-out hover:shadow-lg uppercase"
     }, props.attributes.buttonPrimaryText), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
       className: "inicio-btn-secondary mt-5 mb-4 text-white no-underline",
       href: props.attributes.buttonSecondaryUrl

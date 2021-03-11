@@ -17,6 +17,7 @@ import {
 	useBlockProps,
 	RichText,
 	InspectorControls,
+	InnerBlocks,
 } from "@wordpress/block-editor";
 
 /**
@@ -80,6 +81,65 @@ export default function Edit(props) {
 				</InspectorControls>
 			</Fragment>,
 			<section id="inicio" className="inicio min-h-screen flex flex-col">
+				<header>
+					<div className="mx-auto container max-w-full px-4">
+						<div className="lg:flex lg:justify-between lg:items-center py-6">
+							<div className="flex justify-between items-center">
+								<a
+									href="https://inmo.work/"
+									className="custom-logo-link"
+									rel="home"
+									aria-current="page"
+								>
+									<img
+										src="https://secureservercdn.net/166.62.112.107/753.6ee.myftpupload.com/wp-content/uploads/2021/03/cropped-logo.png?time=1615350937"
+										className="custom-logo"
+										alt="Inmo"
+										width="81"
+										height="25"
+									/>
+								</a>
+								<div class="lg:hidden">
+									<a
+										href="#"
+										aria-label="Toggle navigation"
+										id="primary-menu-toggle"
+									>
+										<svg
+											viewBox="0 0 20 20"
+											className="inline-block w-6 h-6"
+											version="1.1"
+											xmlns="http://www.w3.org/2000/svg"
+											xmlnsXlink="http://www.w3.org/1999/xlink"
+										>
+											<g
+												stroke="none"
+												stroke-width="1"
+												fill="currentColor"
+												fill-rule="evenodd"
+											>
+												<g id="icon-shape">
+													<path
+														d="M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z"
+														id="Combined-Shape"
+													></path>
+												</g>
+											</g>
+										</svg>
+									</a>
+								</div>
+								{/*<!--fim hamburger menu--> */}
+							</div>
+							{/*<!--fim logo e hamburger mobile menu--> */}
+							<div
+								id="primary-menu"
+								className="hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block"
+							>
+								<InnerBlocks />
+							</div>
+						</div>
+					</div>
+				</header>
 				<div className="flex flex-col justify-center items-center mx-auto container">
 					<RichText
 						className="inicio-title text-2xl font-bold text-center mt-8 text-white"
@@ -103,11 +163,11 @@ export default function Edit(props) {
 						value={paragraph2}
 						placeholder="linha 2"
 					/>
-					<button className="inicio-btn-primary bg-white px-12 py-8 rounded-full text-primary mt-6 border-none">
+					<button className="inicio-btn-primary bg-white px-12 py-8 rounded-full text-primary mt-6 border-none uppercase">
 						<RichText
 							onChange={onChangeButtonPrimaryText} // onChange event callback
 							value={buttonPrimaryText} // Input Binding
-							placeholder="Name of the link"
+							placeholder="INSIRA SEU TEXTO"
 						/>
 					</button>
 
