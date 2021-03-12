@@ -26,7 +26,7 @@ export default function save(props) {
 	const blockProps = useBlockProps.save();
 	return (
 		// <section {...useBlockProps.save()}>
-		<section id="inicio" class="inicio min-h-screen flex flex-col">
+		<section id="inicio" className="inicio min-h-screen flex flex-col">
 			<header>
 				<div className="mx-auto container max-w-full px-4">
 					<div className="lg:flex lg:justify-between lg:items-center py-6">
@@ -45,7 +45,7 @@ export default function save(props) {
 									height="25"
 								/>
 							</a>
-							<div class="lg:hidden">
+							<div className="lg:hidden">
 								<a
 									href="#"
 									aria-label="Toggle navigation"
@@ -60,9 +60,9 @@ export default function save(props) {
 									>
 										<g
 											stroke="none"
-											stroke-width="1"
+											strokeWidth="1"
 											fill="currentColor"
-											fill-rule="evenodd"
+											fillRule="evenodd"
 										>
 											<g id="icon-shape">
 												<path
@@ -86,10 +86,10 @@ export default function save(props) {
 					</div>
 				</div>
 			</header>
-			<div class="flex flex-col justify-center items-center mx-auto container">
+			<div className="flex flex-col justify-center items-center mx-auto container">
 				<RichText.Content
 					className="inicio-title text-2xl font-bold text-center mt-8 text-white"
-					tagName="h1"
+					tagName="h2"
 					value={props.attributes.title}
 				/>
 				<RichText.Content
@@ -102,12 +102,16 @@ export default function save(props) {
 					tagName="p"
 					value={props.attributes.paragraph2}
 				/>
-				<button
+				<RichText.Content
+					tagName="button"
 					id="takebot"
-					className="inicio-btn-primary bg-white px-12 py-8 rounded-full text-primary mt-6 border-none focus:ring-4 focus:ring-purple-500 focus:outline-none text-base transform hover:scale-110 transition duration-500 ease-in-out hover:shadow-lg uppercase"
-				>
+					className="inicio-btn-primary"
+					value={props.attributes.buttonPrimaryText}
+				/>
+
+				{/* <button id="takebot" className="inicio-btn-primary">
 					{props.attributes.buttonPrimaryText}
-				</button>
+				</button> */}
 				<a
 					className="inicio-btn-secondary mt-5 mb-4 text-white no-underline"
 					href={props.attributes.buttonSecondaryUrl}

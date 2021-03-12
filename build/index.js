@@ -1,9 +1,20 @@
 (window["webpackJsonp_inmo"] = window["webpackJsonp_inmo"] || []).push([["style-index"],{
 
-/***/ "./src/style.scss":
-/*!************************!*\
-  !*** ./src/style.scss ***!
-  \************************/
+/***/ "./src/blocks/inicio/style.scss":
+/*!**************************************!*\
+  !*** ./src/blocks/inicio/style.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./src/blocks/quem-somos/style.scss":
+/*!******************************************!*\
+  !*** ./src/blocks/quem-somos/style.scss ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -170,10 +181,26 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/edit.js":
-/*!*********************!*\
-  !*** ./src/edit.js ***!
-  \*********************/
+/***/ "./src/blocks/blocks.js":
+/*!******************************!*\
+  !*** ./src/blocks/blocks.js ***!
+  \******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _inicio__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./inicio */ "./src/blocks/inicio/index.js");
+/* harmony import */ var _quem_somos__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./quem-somos */ "./src/blocks/quem-somos/index.js");
+
+
+
+/***/ }),
+
+/***/ "./src/blocks/inicio/edit.js":
+/*!***********************************!*\
+  !*** ./src/blocks/inicio/edit.js ***!
+  \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -186,15 +213,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/inicio/editor.scss");
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_editor_scss__WEBPACK_IMPORTED_MODULE_3__);
 
-
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
- */
 
 
 /**
@@ -223,6 +244,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Edit(props) {
+  console.log("🚀 ~ file: edit.js ~ line 40 ~ Edit ~ props", props);
   var _props$attributes = props.attributes,
       title = _props$attributes.title,
       paragraph1 = _props$attributes.paragraph1,
@@ -256,15 +278,16 @@ function Edit(props) {
   }
 
   return (// <section {...useBlockProps()}>
-    [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
+    Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
       title: "Configura\xE7\xF5es",
       initialOpen: true
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["TextControl"], {
       help: "Insira a url do link de WhatsApp",
       label: "WhatsApp URL",
-      value: buttonSecondaryUrl,
+      value: buttonSecondaryUrl || "",
       onChange: onChangeButtonSecondaryUrl
-    })))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("section", {
+    }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("section", {
+      key: "inmo-inicio",
       id: "inicio",
       className: "inicio min-h-screen flex flex-col"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("header", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -284,86 +307,69 @@ function Edit(props) {
       alt: "Inmo",
       width: "81",
       height: "25"
-    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-      class: "lg:hidden"
-    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
-      href: "#",
-      "aria-label": "Toggle navigation",
-      id: "primary-menu-toggle"
-    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("svg", {
-      viewBox: "0 0 20 20",
-      className: "inline-block w-6 h-6",
-      version: "1.1",
-      xmlns: "http://www.w3.org/2000/svg",
-      xmlnsXlink: "http://www.w3.org/1999/xlink"
-    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("g", {
-      stroke: "none",
-      "stroke-width": "1",
-      fill: "currentColor",
-      "fill-rule": "evenodd"
-    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("g", {
-      id: "icon-shape"
-    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("path", {
-      d: "M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z",
-      id: "Combined-Shape"
-    }))))))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       id: "primary-menu",
       className: "hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], null))))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "flex flex-col justify-center items-center mx-auto container"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
       className: "inicio-title text-2xl font-bold text-center mt-8 text-white",
-      tagName: "h1",
+      tagName: "h2",
       onChange: onChangeTitle,
-      value: title,
+      value: title || "",
       placeholder: "Ol\xE1, \xE9 bom receber voc\xEA aqui",
       default: "Ol\xE1, \xE9 bom receber voc\xEA aqui"
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
       className: "inicio-line-1 mt-10 text-base text-white text-center leading-10 tracking-wide",
       tagName: "p",
+      multiline: "false",
       onChange: function onChange(value) {
         return props.setAttributes({
           paragraph1: value
         });
       },
-      value: paragraph1,
+      value: paragraph1 || "",
       placeholder: "N\xF3s somos a Inmo, estamos aqui para ajudar voc\xEA na constru\xE7\xE3o do seu chatbot."
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
       className: "inicio-line-2 mt-10 text-base text-white text-center leading-10 tracking-wide",
       tagName: "p",
+      multiline: "false",
       onChange: function onChange(value) {
         return props.setAttributes({
           paragraph2: value
         });
       },
-      value: paragraph2,
-      placeholder: "linha 2"
-    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("button", {
-      className: "inicio-btn-primary bg-white px-12 py-8 rounded-full text-primary mt-6 border-none uppercase"
-    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
+      value: paragraph2 || "",
+      placeholder: "Linha 2"
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"] // key="editable"
+    // tagName="button"
+    , {
+      multiline: "false",
       onChange: onChangeButtonPrimaryText // onChange event callback
       ,
-      value: buttonPrimaryText // Input Binding
+      value: buttonPrimaryText || "" // Input Binding
       ,
-      placeholder: "INSIRA SEU TEXTO"
-    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
-      className: "inicio-btn-secondary mt-5 mb-4 text-white no-underline"
-    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
+      placeholder: "Insira o texto do bot\xE3o",
+      className: "inicio-btn-primary"
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"] // key="editable1"
+    // tagName="a"
+    , {
+      className: "inicio-btn-secondary mt-5 mb-4 text-white no-underline",
       onChange: onChangeButtonSecondaryText // onChange event callback
       ,
       value: buttonSecondaryText // Input Binding
       ,
-      placeholder: "Falar no Whatsapp"
-    }))))]
+      placeholder: "Insira o texto do WhatsApp"
+    }))))
   );
 }
 
 /***/ }),
 
-/***/ "./src/editor.scss":
-/*!*************************!*\
-  !*** ./src/editor.scss ***!
-  \*************************/
+/***/ "./src/blocks/inicio/editor.scss":
+/*!***************************************!*\
+  !*** ./src/blocks/inicio/editor.scss ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -371,10 +377,10 @@ function Edit(props) {
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./src/blocks/inicio/index.js":
+/*!************************************!*\
+  !*** ./src/blocks/inicio/index.js ***!
+  \************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -384,10 +390,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./src/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/inicio/style.scss");
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/save.js");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/inicio/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/blocks/inicio/save.js");
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
@@ -422,7 +428,7 @@ __webpack_require__.r(__webpack_exports__);
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
 
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("create-block/inmo", {
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("inmo/inicio", {
   /**
    * @see https://make.wordpress.org/core/2020/11/18/block-api-version-2/
    */
@@ -432,13 +438,13 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("cre
    * This is the display title for your block, which can be translated with `i18n` functions.
    * The block inserter will show this name.
    */
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Inmo", "inmo"),
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Inmo - Header", "inmo"),
 
   /**
    * This is a short description for your block, can be translated with `i18n` functions.
    * It will be shown in the Block Tab in the Settings Sidebar.
    */
-  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Bloco Início Header INMO", "inmo"),
+  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Bloco Header INMO", "inmo"),
 
   /**
    * Blocks are grouped into categories to help users browse and discover them.
@@ -463,37 +469,41 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("cre
     title: {
       type: "string",
       source: "text",
-      selector: ".inicio-title",
-      default: "Olá, é bom receber você aqui"
+      selector: "h2.inicio-title" // default: "Olá, é bom receber você aqui",
+
     },
     paragraph1: {
       type: "string",
-      source: "text",
-      selector: ".inicio-line-1",
-      default: "Nós somos a Inmo, estamos aqui para ajudar você na construção do seu chatbot."
+      source: "html",
+      selector: "p.inicio-line-1" // default:				"Nós somos a Inmo, estamos aqui para ajudar você na construção do seu chatbot.",
+
     },
     paragraph2: {
       type: "string",
-      source: "text",
-      selector: ".inicio-line-2",
-      default: "Converse com o <i>Mô</i>, o robô que criamos para entender a sua necessidade ;)"
+      source: "html",
+      selector: "p.inicio-line-2" // default:"Converse com o <i>Mô</i>, o robô que criamos para entender a sua necessidade ;)",
+
     },
     buttonPrimaryText: {
       type: "string",
       source: "text",
-      selector: ".inicio-btn-primary"
+      selector: "button.inicio-btn-primary" // default: "Falar com Mô",
+
     },
     buttonSecondaryText: {
+      type: "string",
       attribute: "text",
-      selector: ".btn-secondary",
-      source: "children"
+      // source: "html",
+      selector: "a.inicio-btn-secondary" // default: "Falar no WhatsApp",
+
     },
     buttonSecondaryUrl: {
-      selector: "a.inicio-btn-secondary",
+      type: "string",
       source: "attribute",
       // binds an attribute of the tag
-      attribute: "href" // binds href of a: the link url
-
+      attribute: "href",
+      // binds href of a: the link url
+      selector: "a.inicio-btn-secondary"
     }
   },
 
@@ -510,10 +520,10 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("cre
 
 /***/ }),
 
-/***/ "./src/save.js":
-/*!*********************!*\
-  !*** ./src/save.js ***!
-  \*********************/
+/***/ "./src/blocks/inicio/save.js":
+/*!***********************************!*\
+  !*** ./src/blocks/inicio/save.js ***!
+  \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -557,7 +567,7 @@ function save(props) {
   return (// <section {...useBlockProps.save()}>
     Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("section", {
       id: "inicio",
-      class: "inicio min-h-screen flex flex-col"
+      className: "inicio min-h-screen flex flex-col"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("header", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "mx-auto container max-w-full px-4"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -576,7 +586,7 @@ function save(props) {
       width: "81",
       height: "25"
     })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-      class: "lg:hidden"
+      className: "lg:hidden"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
       href: "#",
       "aria-label": "Toggle navigation",
@@ -589,9 +599,9 @@ function save(props) {
       xmlnsXlink: "http://www.w3.org/1999/xlink"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("g", {
       stroke: "none",
-      "stroke-width": "1",
+      strokeWidth: "1",
       fill: "currentColor",
-      "fill-rule": "evenodd"
+      fillRule: "evenodd"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("g", {
       id: "icon-shape"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("path", {
@@ -601,10 +611,10 @@ function save(props) {
       id: "primary-menu",
       className: "hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"].Content, null))))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-      class: "flex flex-col justify-center items-center mx-auto container"
+      className: "flex flex-col justify-center items-center mx-auto container"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
       className: "inicio-title text-2xl font-bold text-center mt-8 text-white",
-      tagName: "h1",
+      tagName: "h2",
       value: props.attributes.title
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
       className: "inicio-line-1 mt-10 text-base text-white text-center leading-10 tracking-wide",
@@ -614,15 +624,376 @@ function save(props) {
       className: "inicio-line-2 mt-10 text-base text-white text-center leading-10 tracking-wide",
       tagName: "p",
       value: props.attributes.paragraph2
-    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("button", {
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
+      tagName: "button",
       id: "takebot",
-      className: "inicio-btn-primary bg-white px-12 py-8 rounded-full text-primary mt-6 border-none focus:ring-4 focus:ring-purple-500 focus:outline-none text-base transform hover:scale-110 transition duration-500 ease-in-out hover:shadow-lg uppercase"
-    }, props.attributes.buttonPrimaryText), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
+      className: "inicio-btn-primary",
+      value: props.attributes.buttonPrimaryText
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", {
       className: "inicio-btn-secondary mt-5 mb-4 text-white no-underline",
       href: props.attributes.buttonSecondaryUrl
     }, props.attributes.buttonSecondaryText)))
   );
 }
+
+/***/ }),
+
+/***/ "./src/blocks/quem-somos/edit.js":
+/*!***************************************!*\
+  !*** ./src/blocks/quem-somos/edit.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Edit; });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/quem-somos/editor.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_editor_scss__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+function Edit(props) {
+  console.log("🚀 ~ file: edit.js ~ line 33 ~ Edit ~ props", props);
+  var _props$attributes = props.attributes,
+      title = _props$attributes.title,
+      body = _props$attributes.body,
+      mediaId = _props$attributes.mediaId,
+      mediaUrl = _props$attributes.mediaUrl,
+      setAttributes = props.setAttributes; // console.log("🚀 ~ file: edit.js ~ line 39 ~ Edit ~ attributes", attributes);
+
+  var onChangeTitle = function onChangeTitle(value) {
+    setAttributes({
+      title: value
+    });
+  };
+
+  var onChangeBody = function onChangeBody(value) {
+    setAttributes({
+      body: value
+    });
+  };
+
+  var onSelectMedia = function onSelectMedia(media) {
+    props.setAttributes({
+      mediaId: media.id,
+      mediaUrl: media.url
+    });
+  };
+
+  var getImageButton = function getImageButton(openEvent) {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+      className: mediaId ? "image-button h-auto" : "button button-large h-auto",
+      onClick: openEvent
+    }, !mediaId ? "Upload Image" : Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
+      src: mediaUrl,
+      alt: "Upload Image"
+    })); // if (mediaUrl) {
+    // 	return <img src={mediaUrl} onClick={openEvent} className="image" />;
+    // } else {
+    // 	return (
+    // 		<div className="button-container">
+    // 			<Button onClick={openEvent} className="button button-large">
+    // 				Pick an image
+    // 			</Button>
+    // 		</div>
+    // 	);
+    // }
+  };
+
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("section", {
+    key: "inmo-quem-somos",
+    id: "quem-somos",
+    className: "quem-somos bg-white py-8"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    className: "container max-w-6xl sm:p-8 mx-auto"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    className: "flex flex-wrap"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    className: "w-full sm:w-1/2 sm:pr-6"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
+    className: "quem-somos-title text-primary mb-10 font-bold",
+    tagName: "h2",
+    onChange: onChangeTitle,
+    value: title || "",
+    placeholder: "Escreva o t\xEDtulo"
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
+    className: "quem-somos-body text-gray",
+    tagName: "p",
+    onChange: onChangeBody,
+    value: body || "",
+    placeholder: "A Inmo \xE9 especialista em construir conversas automatizadas que facilitam a comunica\xE7\xE3o entre marcas e pessoas...."
+  })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    className: "w-full sm:w-1/2 pt-16 sm:pt-0 sm:pl-6"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["MediaUploadCheck"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["MediaUpload"], {
+    onSelect: function onSelect(media) {
+      setAttributes({
+        mediaId: media.id,
+        mediaUrl: media.url
+      });
+    },
+    type: "image",
+    value: mediaId,
+    render: function render(_ref) {
+      var open = _ref.open;
+      return getImageButton(open);
+    }
+  })))))));
+}
+
+/***/ }),
+
+/***/ "./src/blocks/quem-somos/editor.scss":
+/*!*******************************************!*\
+  !*** ./src/blocks/quem-somos/editor.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./src/blocks/quem-somos/index.js":
+/*!****************************************!*\
+  !*** ./src/blocks/quem-somos/index.js ***!
+  \****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/quem-somos/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/quem-somos/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/blocks/quem-somos/save.js");
+/**
+ * Registers a new block provided a unique name and an object defining its behavior.
+ *
+ * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
+ */
+
+/**
+ * Retrieves the translation of text.
+ *
+ * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
+ */
+
+
+/**
+ * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
+ * All files containing `style` keyword are bundled together. The code used
+ * gets applied both to the front of your site and to the editor.
+ *
+ * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
+ */
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+/**
+ * Every block starts by registering a new block type definition.
+ *
+ * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
+ */
+
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("inmo/quem-somos", {
+  /**
+   * @see https://make.wordpress.org/core/2020/11/18/block-api-version-2/
+   */
+  apiVersion: 2,
+
+  /**
+   * This is the display title for your block, which can be translated with `i18n` functions.
+   * The block inserter will show this name.
+   */
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Inmo - Quem somos", "inmo"),
+
+  /**
+   * This is a short description for your block, can be translated with `i18n` functions.
+   * It will be shown in the Block Tab in the Settings Sidebar.
+   */
+  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Bloco Quem somos INMO", "inmo"),
+
+  /**
+   * Blocks are grouped into categories to help users browse and discover them.
+   * The categories provided by core are `text`, `media`, `design`, `widgets`, and `embed`.
+   */
+  category: "common",
+
+  /**
+   * An icon property should be specified to make it easier to identify a block.
+   * These can be any of WordPress’ Dashicons, or a custom svg element.
+   */
+  icon: "groups",
+
+  /**
+   * Optional block extended support features.
+   */
+  supports: {// Removes support for an HTML mode.
+    // html: false,
+  },
+  attributes: {
+    title: {
+      type: "string",
+      source: "text",
+      selector: "h2.quem-somos-title" // default: "Olá, é bom receber você aqui",
+
+    },
+    body: {
+      type: "string",
+      source: "html",
+      selector: "p.quem-somos-body" // default:				"Nós somos a Inmo, estamos aqui para ajudar você na construção do seu chatbot.",
+
+    },
+    mediaId: {
+      type: "number",
+      default: 0
+    },
+    mediaUrl: {
+      type: "string",
+      source: "attribute",
+      selector: "img",
+      attribute: "src",
+      default: ""
+    }
+  },
+
+  /**
+   * @see ./edit.js
+   */
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
+
+  /**
+   * @see ./save.js
+   */
+  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"]
+});
+
+/***/ }),
+
+/***/ "./src/blocks/quem-somos/save.js":
+/*!***************************************!*\
+  !*** ./src/blocks/quem-somos/save.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return save; });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+
+
+/**
+ * Retrieves the translation of text.
+ *
+ * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
+ */
+
+/**
+ * React hook that is used to mark the block wrapper element.
+ * It provides all the necessary props like the class name.
+ *
+ * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
+ */
+
+
+/**
+ * The save function defines the way in which the different attributes should
+ * be combined into the final markup, which is then serialized by the block
+ * editor into `post_content`.
+ *
+ * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#save
+ *
+ * @return {WPElement} Element to render.
+ */
+
+function save(props) {
+  var blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["useBlockProps"].save();
+  var _props$attributes = props.attributes,
+      title = _props$attributes.title,
+      mediaUrl = _props$attributes.mediaUrl,
+      body = _props$attributes.body;
+
+  var cardImage = function cardImage(src) {
+    if (!src) return null; // No alt set, so let's hide it from screen readers
+
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
+      className: "mx-auto fade",
+      src: src,
+      alt: ""
+    });
+  };
+
+  return (// <section {...useBlockProps.save()}>
+    Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("section", {
+      key: "inmo-inicio",
+      id: "quem-somos",
+      className: "quem-somos bg-white py-8"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "container max-w-6xl sm:p-8 mx-auto"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "flex flex-wrap"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "w-full sm:w-1/2 sm:pr-6"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
+      className: "quem-somos-title text-primary mb-10 font-bold",
+      tagName: "h2",
+      value: title || ""
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
+      className: "quem-somos-body text-gray",
+      tagName: "p",
+      value: body || ""
+    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "w-full sm:w-1/2 pt-16 sm:pt-0 sm:pl-6"
+    }, cardImage(mediaUrl)))))
+  );
+}
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _blocks_blocks_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/blocks.js */ "./src/blocks/blocks.js");
+/**
+ * Gutenberg Blocks
+ *
+ * All blocks related JavaScript files should be imported here.
+ * You can create a new block folder in this dir and include code
+ * for that block here as well.
+ *
+ * All blocks should be included here since this is the file that
+ * Webpack is compiling as the input file.
+ */
+
 
 /***/ }),
 

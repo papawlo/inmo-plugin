@@ -1,0 +1,21 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+// .inicio-btn-primary {
+// 	@apply bg-white px-12 py-8 rounded-full text-primary mt-6 border-none uppercase;
+// }
+// Colors
+$gray: #cccccc;
+$off-white: #f1f1f1;
+
+.button-container {
+	text-align: center;
+	padding: 22% 0;
+	background: $off-white;
+	border: 1px solid $gray;
+	border-radius: 2px;
+	margin: 0 0 1.2rem 0;
+}

@@ -3,8 +3,18 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-create-block-inmo {
-  border: 1px dotted #f00;
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.button-container {
+  text-align: center;
+  padding: 22% 0;
+  background: #f1f1f1;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  margin: 0 0 1.2rem 0;
 }
 
 /*# sourceMappingURL=index.css.map*/
